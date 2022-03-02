@@ -1,6 +1,18 @@
 import ballerina/io;
 
 
+// Leaving off the return type of a function is the 
+// same as defining nil as the return type. Moreover, 
+// falling off the end of a function or return by 
+// itself is equivalent to return (). Therefore, a
+//  function can be written as:
+
+function foo() returns () {
+
+    return ();
+    
+}
+
 
 public function main() {
     // Nil is another data type. It has a special significance 
@@ -25,6 +37,6 @@ public function main() {
     io:println("value of m = ");
     io:println(m);
 
-
+    foo();
 
 }
